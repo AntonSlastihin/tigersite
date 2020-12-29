@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<img src="unnamed.jpg" alt="">
+		<img src="color.jpg" alt="" class="tiger">
+	</div>
+	<script>
+
+		(() => {
+			let container = document.querySelector(".container"),
+				tiger = container.querySelector('.tiger');
+			container.onmousemove = (e) => {
+				let x = Math.floor(e.offsetX / container.clientWidth * 100);
+				tiger.style.width = x + '%';
+			}
+		})();
+
+	</script>
+</body>
+</html>
